@@ -1,4 +1,4 @@
-# Font Picker for React
+# Font Picker for Vue
 
 **A simple, customizable font picker allowing users to preview, select, and use Google Fonts on your website.**
 
@@ -7,7 +7,7 @@
 
 → **[Demo](https://samuelmeuli.github.io/font-picker)**
 
-_This is the React component for the [**Font Picker**](https://github.com/samuelmeuli/font-picker) package._
+_This is the Vue component for the [**Font Picker**](https://github.com/samuelmeuli/font-picker) package._
 
 <p align="center">
   <img src=".github/demo.gif" width=700 alt="Demo">
@@ -21,45 +21,31 @@ _This is the React component for the [**Font Picker**](https://github.com/samuel
 Install the package using **NPM**:
 
 ```sh
-npm install font-picker-react
+npm install font-picker-vue
 ```
 
 
 ### 2. Displaying the font picker
 
-Add the **`<FontPicker />` component** to your React code:
+Import the **`<font-picker>` component** to your Vue code:
 
-```jsx
-import React, { Component } from 'react';
-import FontPicker from 'font-picker-react';
+```javascript
 
-export default class ExampleComponent extends Component {
-  constructor() {
-    super();
-    this.state = { activeFont: 'Open Sans' };
-  }
+import Vue from 'vue';
+import FontPicker from 'font-picker-vue';
 
-  render() {
-    return (
-      <div>
-        <FontPicker
-          apiKey="YOUR_API_KEY"
-          activeFont={this.state.activeFont}
-          onChange={nextFont => this.setState({ activeFont: nextFont.family })}
-        />
-        <p className="apply-font">
-          The font will be applied to this text.
-        </p>
-      </div>
-    );
-  }
-}
+Vue.use(FontPicker);
 ```
 
+Use the component:
+
+```html
+<font-picker :api-key="'YOUR-KEY-HERE'" :options="options"></font-picker
+```
 
 ### 3. Applying the selected font
 
-**Add `className="apply-font"` to all JSX elements you want to apply the selected font to.**
+**Add `class="apply-font"` to all elements you want to apply the selected font to.**
 
 When the user selects a font, it will automatically be downloaded and applied to all HTML elements of the `"apply-font"` class.
 
