@@ -19,22 +19,8 @@ rules:
     - always
     - objectsInObjects: false
 
-  # Default React rules
-  react/button-has-type: 2
-  react/jsx-filename-extension:
-    - 2
-    - extensions:
-      - .js
-  react/jsx-indent:
-    - 2
-    - tab
-  react/jsx-indent-props:
-    - 2
-    - tab
-
   # Project-specific rules
   no-console: 0
   import/no-extraneous-dependencies:
     - 2
     - devDependencies: true  # ignore storybook-react
-  react/prop-types: 0

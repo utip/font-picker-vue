@@ -1,17 +1,12 @@
-import babel from 'rollup-plugin-babel';
-
+import VuePlugin from 'rollup-plugin-vue';
+import VueLoaderPlugin from 'vue-loader';
 
 export default {
-	input: 'src/FontPicker',
+	input: 'src/FontPicker.vue',
 	output: {
 		file: 'lib/FontPicker.js',
 		format: 'cjs'
 	},
-	external: ['react', 'font-picker'],
-	plugins: [
-		babel({
-			exclude: 'node_modules/**',
-			plugins: ['external-helpers']
-		})
-	]
+	external: ['vue', 'font-picker'],
+    plugins: [VuePlugin(/* VuePluginOptions */), VueLoaderPlugin]
 };
