@@ -171,17 +171,9 @@
              * Expand/collapse the picker's font list
              */
             toggleExpanded() {
-                if (this.state.expanded) {
-                    this.setState({
-                        expanded: false
-                    });
-                    document.removeEventListener('click', this.onClose);
-                } else {
-                    this.setState({
-                        expanded: true
-                    });
-                    document.addEventListener('click', this.onClose);
-                }
+                this.setState({
+                    expanded: !this.state.expanded
+                });
             },
 
 			snakeCase(text) {
