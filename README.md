@@ -40,7 +40,7 @@ Vue.use(FontPicker);
 Use the component:
 
 ```html
-<font-picker :api-key="'YOUR-KEY-HERE'" :options="options"></font-picker
+<font-picker :api-key="'YOUR-KEY-HERE'" :options="options" :active-font="fontFamily" @change="myFunc"></font-picker
 ```
 
 ### 3. Applying the selected font
