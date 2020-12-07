@@ -25,6 +25,7 @@
 		"build": "rollup --config",
 		"lint": "eslint .",
 		"precommit": "npm run lint",
+		"prepare": "npm run build",
 		"prepush": "npm run lint"
 	},
 	"dependencies": {
