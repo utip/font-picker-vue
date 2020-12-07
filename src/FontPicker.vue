@@ -88,6 +88,7 @@
                         errorText: '',
                         loadingStatus: 'finished'
                     });
+										this.setActiveFont(this.activeFont);
                 })
                 .catch((err) => {
                     // error while loading font list
